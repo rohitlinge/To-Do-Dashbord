@@ -1,0 +1,291 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100vh;
+
+    /* Use background instead of background-color */
+    background: linear-gradient(70deg, #C9BEFF, #6367FF);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-direction: column;
+}
+
+.main{
+    width: 95%;
+    height: 95%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 4 cards */
+/* Container for cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: 35%;
+}
+
+/* Individual card */
+.card {
+    flex: 1;
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    align-items: center;
+    gap: 10px;
+
+}
+
+/* Different gradient colors */
+.card:nth-child(1) {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.card:nth-child(4) {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+.card:nth-child(5) {
+    background: linear-gradient(135deg, #b501be, #ffd200);
+}
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* Text styling */
+.card h2 {
+    font-size: 24px;
+}
+
+
+.card img{
+
+width: 100px;
+height: 100px;
+
+
+}
+
+.pages{
+
+width: 100%;
+height: 100%;
+display: none;
+position: relative;
+
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.back{
+width: 100px;
+height: 40px;
+background-color: rgba(0, 0, 0, 0.436);
+color: white;
+position: absolute;
+top: 20px;
+right: 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+font-weight: bold;
+}
+
+.back:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.page h1{
+    font-size: 90px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.todomain{
+
+width: 100%;
+height: 60vh;
+background: white;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+
+}
+
+.todoadd{
+
+width: 30%;
+height: 60vh;
+background: linear-gradient(135deg, #ff7e5f, #feb47b);
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+}
+
+.addtodolistname{
+
+width: 70%;
+height: 7%;
+border: 3px solid rgb(255, 255, 255);
+border-radius: 10px;
+
+}
+
+.addtodolistdec{
+
+width: 70%;
+height: 40%;
+border: 3px solid rgb(255, 255, 255);
+border-radius: 10px;
+}
+
+.addtodosub{
+
+width: 40%;
+height: 7%;
+border: 3px solid rgb(255, 255, 255);
+border-radius: 10px;
+background-color: #fff;
+}
+.addtodosub:active{
+
+transform: scaleY(0.99);
+
+
+}
+
+.todoview{
+
+width: 60%;
+height: 60vh;
+background: linear-gradient(135deg, #ff7e5f, #feb47b);
+border-radius: 10px;
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+position: relative;
+}
+
+.taskbox{
+
+width: 100%;
+height: auto;
+border-bottom: 3px solid rgb(255, 255, 255);
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+margin-top: 10px ;
+padding-left: 10px;
+padding-right: 10px;
+gap: 15px;
+overflow-x: hidden;
+}
+
+.taskbox h3{
+
+color: white;
+font-size: 20px;
+}
+
+.taskbox p{
+
+color: white;
+font-size: 18px;
+font-weight: 500;
+margin-left: auto;
+}
+
+.clearalltask{
+width: 100px;
+height: 40px;
+background-color: rgba(0, 0, 0, 0.436);
+color: white;
+position: absolute;
+bottom: 20px;
+right: 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+font-weight: bold;
+}
+
+.clearalltask:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    scale: 1.05;
+}
+
+
+.marktaskimp lable{
+
+font-size: 15px;
+font-weight: 700;
+color: white;
+
+}
+
+.spanshouldbe{
+background-color: rgba(255, 0, 0, 0.589);
+color: white;
+font-size: 15px;
+font-weight: 500;
+width: 30px;
+height: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 2px;
+}
+
+.spanremove {
+background-color: rgba(255, 255, 255, 0);
+}
+
