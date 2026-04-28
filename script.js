@@ -36,9 +36,8 @@ function loadTasks() {
 
         <h3>${task.addtodolistname}</h3>
         <span class="${task.taskimpchecker ? 'spanshouldbe' : 'spanremove'}">
-  ${task.taskimpchecker ? 'Imp' : ''}
+  ${task.taskimpchecker ? "IMP" : ""}
 </span>
-
         <p>${task.addtodolistdec}</p>
         <button class="clearalltask" id="clearalltask">Clear Task</button>
       </div>
@@ -60,7 +59,7 @@ let taskimpchecker = "";
 
 if (checkbox) {
   taskimpchecker = "IMP";
-}
+} 
 
   let tasknew = {
     addtodolistname,
@@ -92,3 +91,52 @@ localStorage.removeItem("tasklist"); // only remove your tasks
     loadTasks(); // refresh UI
   }
 });
+
+
+
+
+let demoiteams = Array.from({ length: 18 }, function(val, index){
+  return index;
+})
+
+let container = document.querySelector(".dailyplannerchart")
+
+let datainputdailycheck = JSON.parse(localStorage.getItem("dailycheck")) || [];
+
+demoiteams.forEach(function(val, index){
+
+  container.innerHTML += `
+    <div class="dilypalnerinputsection">
+      <p>${6 + val}:00 to ${7 + val}:00</p>
+      <input 
+        placeholder="...." 
+        class="dailyplanerssinput" 
+        value="${datainputdailycheck[index] || ""}">
+    </div>
+  `;
+
+});
+
+
+let dilypalnerinputsection = document.querySelectorAll(".dilypalnerinputsection")
+
+dilypalnerinputsection.forEach(function(datas, index){
+
+ let input = datas.querySelector("input");
+
+input.addEventListener("change", function(elems){
+  let datainputdailycheck = JSON.parse(localStorage.getItem("dailycheck"))|| []
+   datainputdailycheck[index] = elems.target.value;
+
+// save data in local store
+   localStorage.setItem("dailycheck", JSON.stringify(datainputdailycheck))
+
+
+
+
+
+})
+
+
+
+})
