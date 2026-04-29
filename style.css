@@ -341,3 +341,57 @@ background-color: rgb(255, 0, 0);
 font-size: 10px;
 padding: 5px;
 }
+
+.motivationblock{
+
+width: 100%;
+height: 75%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+
+}
+
+.motivationblock box{
+
+width: 80%;
+height: 100vh;
+background-image: url("https://static.vecteezy.com/system/resources/previews/005/205/623/non_2x/silhouette-of-businessman-on-mountain-top-over-sunset-sky-background-business-success-leadership-and-achievement-concept-free-photo.jpg");
+border: none;
+border-radius: 10px;
+padding: 10px;
+display: flex;
+gap: 5px;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.quote{
+
+color: white;
+font-size: 50px;
+padding-left: 150px;
+padding-right: 150px;
+}
+
+.resetmotivationalquote{
+
+position: absolute;
+bottom: 37px;
+right: 180px;
+width: 150px;
+height: 40px;
+border-radius:0px 0px 10px 0px;
+border: 1px solid white;
+background: linear-gradient(135deg, #ff7e5f, #feb47b);
+color: white;
+}
+
+.resetmotivationalquote:active{
+
+scale: 0.98;
+
+}

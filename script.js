@@ -140,3 +140,18 @@ input.addEventListener("change", function(elems){
 
 
 })
+
+let quote = document.querySelector(".quote")
+
+window.addEventListener('load', function(){
+
+fetch("https://dummyjson.com/quotes").then(response => response.json()).then(function(data){
+
+
+let finalquote = data.quotes[Math.floor(Math.random() * 10) + 1].quote
+
+quote.innerHTML = `${finalquote}`
+   
+})
+
+});        
